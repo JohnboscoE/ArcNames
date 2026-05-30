@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: #000000;
+  color: #E2E8F0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #000000; }
+::-webkit-scrollbar-thumb { background: #1A1A2E; border-radius: 2px; }
+
+.btn-primary {
+  background:    #0EA5E9;
+  color:         white;
+  border:        none;
+  border-radius: 10px;
+  padding:       12px 24px;
+  font-family:   'DM Sans', sans-serif;
+  font-weight:   600;
+  cursor:        pointer;
+  transition:    all 0.2s;
+  box-shadow:    0 0 20px rgba(14,165,233,0.3);
+}
+.btn-primary:hover    { background: #0369A1; transform: translateY(-1px); }
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+.btn-ghost {
+  background:    transparent;
+  color:         #94A3B8;
+  border:        1px solid #1A1A2E;
+  border-radius: 10px;
+  padding:       10px 20px;
+  font-family:   'DM Sans', sans-serif;
+  cursor:        pointer;
+  transition:    all 0.2s;
+}
+.btn-ghost:hover { color: white; border-color: #0EA5E9; background: rgba(14,165,233,0.05); }
+
+.input-field {
+  background:    #0A0A0A;
+  border:        1px solid #1A1A2E;
+  border-radius: 10px;
+  padding:       12px 16px;
+  color:         #E2E8F0;
+  width:         100%;
+  font-family:   'DM Sans', sans-serif;
+  transition:    border-color 0.2s;
+  outline:       none;
+}
+.input-field:focus         { border-color: #0EA5E9; box-shadow: 0 0 0 3px rgba(14,165,233,0.1); }
+.input-field::placeholder  { color: #334155; }
+
+.card {
+  background:    #0A0A0A;
+  border:        1px solid #1A1A2E;
+  border-radius: 16px;
+  padding:       24px;
+  transition:    border-color 0.2s, transform 0.2s;
+}
+.card:hover { border-color: #0EA5E9; transform: translateY(-2px); }
+
+.badge-available   { background: rgba(14,165,233,0.1); color: #0EA5E9; border: 1px solid rgba(14,165,233,0.2); }
+.badge-taken       { background: rgba(239,68,68,0.1);  color: #EF4444; border: 1px solid rgba(239,68,68,0.2);  }
+.badge-expired     { background: rgba(245,158,11,0.1); color: #F59E0B; border: 1px solid rgba(245,158,11,0.2); }
