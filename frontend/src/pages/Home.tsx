@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { SearchBar } from "../components/SearchBar.tsx";
-import { NameCard } from "../components/NameCard.tsx";
 import { getAllNames, getStats } from "../lib/api.ts";
 
 export function Home() {
