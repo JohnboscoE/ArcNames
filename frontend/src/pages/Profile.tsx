@@ -8,14 +8,13 @@ export function Profile() {
   const { walletAddress } = useWallet();
   const [info, setInfo] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (!name) return;
     getNameInfo(name)
       .then(setInfo)
-      .catch((e) => setError(e.message))
+      .catch((e) => console.error("Failed to fetch name info:", e.message))
       .finally(() => setLoading(false));
   }, [name]);
 
